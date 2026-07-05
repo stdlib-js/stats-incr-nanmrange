@@ -50,7 +50,7 @@ The [**range**][range] is defined as the difference between the maximum and mini
 ## Usage
 
 ```javascript
-import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@esm/index.mjs';
+import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@v0.0.0-esm/index.mjs';
 ```
 
 #### incrnanmrange( window )
@@ -123,7 +123,7 @@ r = accumulator();
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@esm/index.mjs';
+import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@v0.0.0-esm/index.mjs';
 
 // Initialize an accumulator:
 var accumulator = incrnanmrange( 5 );
