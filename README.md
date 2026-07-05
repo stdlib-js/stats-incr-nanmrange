@@ -50,6 +50,11 @@ The [**range**][range] is defined as the difference between the maximum and mini
 ## Usage
 
 ```javascript
+import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-incr-nanmrange/tags). For example,
+
+```javascript
 import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@v0.0.0-deno/mod.js';
 ```
 
@@ -118,7 +123,7 @@ r = accumulator();
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@v0.0.0-deno/mod.js';
+import incrnanmrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmrange@deno/mod.js';
 
 // Initialize an accumulator:
 var accumulator = incrnanmrange( 5 );
