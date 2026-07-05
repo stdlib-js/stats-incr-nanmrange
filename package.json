@@ -1,7 +1,7 @@
 {
   "name": "@stdlib/stats-incr-nanmrange",
   "version": "0.0.0",
-  "description": "Compute a moving range incrementally, ignoring NaN values.",
+  "description": "Compute a moving range incrementally, ignoring `NaN` values.",
   "license": "Apache-2.0",
   "author": {
     "name": "The Stdlib Authors",
@@ -45,6 +45,7 @@
     "@stdlib/math-base-assert-is-negative-zero": "^0.2.3",
     "@stdlib/math-base-special-abs": "^0.2.3",
     "@stdlib/random-base-randu": "^0.2.3",
+    "@stdlib/string-format": "^0.2.3",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
@@ -87,8 +88,7 @@
     "sliding",
     "window",
     "moving",
-    "nan",
-    "ignore"
+    "nan"
   ],
   "funding": {
     "type": "opencollective",
