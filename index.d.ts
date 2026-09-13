@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,22 +16,34 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var isnan = require( '@stdlib/math-base-assert-is-nan' );
-var mrange = require( '@stdlib/stats-incr-mrange' );
-
-
-// MAIN //
+/**
+* If provided a value, returns an updated range; otherwise, returns the current range.
+*
+* ## Notes
+*
+* -   If provided `NaN`, the `NaN` value is ignored.
+* -   If no non-NaN values have been provided, the function returns `null`.
+*
+* @param x - value
+* @returns range
+*/
+type accumulator = ( x?: number ) => number | null;
 
 /**
 * Returns an accumulator function which incrementally computes a moving range, ignoring `NaN` values.
 *
-* @param {PositiveInteger} W - window size
-* @throws {TypeError} must provide a positive integer
-* @returns {Function} accumulator function
+* ## Notes
+*
+* -   The `W` parameter defines the number of values over which to compute the moving range.
+* -   As `W` values are needed to fill the window buffer, the first `W-1` returned values are calculated from smaller sample sizes. Until the window is full, each returned value is calculated from all provided values.
+*
+* @param W - window size
+* @throws must provide a positive integer
+* @returns accumulator function
 *
 * @example
 * var accumulator = incrnanmrange( 3 );
@@ -57,26 +69,9 @@ var mrange = require( '@stdlib/stats-incr-mrange' );
 * r = accumulator();
 * // returns 10.0
 */
-function incrnanmrange( W ) {
-	var acc = mrange( W );
-	return accumulator;
-
-	/**
-	* If provided a value, the accumulator function returns an updated range. If not provided a value, the accumulator function returns the current range.
-	*
-	* @private
-	* @param {number} [x] - new value
-	* @returns {(number|null)} range or null
-	*/
-	function accumulator( x ) {
-		if ( arguments.length === 0 || isnan( x ) ) {
-			return acc();
-		}
-		return acc( x );
-	}
-}
+declare function incrnanmrange( W: number ): accumulator;
 
 
 // EXPORTS //
 
-module.exports = incrnanmrange;
+export = incrnanmrange;
